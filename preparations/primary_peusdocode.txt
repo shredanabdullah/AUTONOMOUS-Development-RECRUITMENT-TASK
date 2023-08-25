@@ -1,0 +1,27 @@
+pseudocode of A* pathfinding algo, i might modify it while implementing
+
+open->the set of nodes to be evaluated(list queue msln)    --------------> to be optimiezed---->> heap 
+closed-> set of nnodes already evaluated, ya3ne kanet elnode eli 3andaha least fcost function per a node check
+add the start node to open
+loop
+    currennt = node in open with the lowest fcost
+    remove current from open
+    add current to closed
+
+    if current is the target aw ana mommkn at-check b eno elhcost bta3t elcurrent node hatkon b zero
+        return-> the path is been found
+    
+    foreach neighbour of the current node 
+        if neighbour is not traversable or closed
+                skip to next neighbour node
+
+        if new path to neighbour is shorter or neighbour is not open
+                set fcost of neighbour
+                set parent of neighbour to current
+                if neighbour is not open
+                    add neighbour to open
+
+
+///
+i'm gonna call in solve function this function once for the item as my goal
+and then clear and call it to start from item postion to the final goal postion.
